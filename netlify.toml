@@ -2,6 +2,15 @@
   publish = "User"
   command = ""
 
+[[redirects]]
+  from = "/work"
+  to = "/work.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
 
 [[redirects]]
   from = "/*"
