@@ -1,0 +1,4 @@
+/Assets/*    /Assets/:splat   200
+/contact     /contact.html    200
+/work        /work.html       200
+/*           /index.html      200

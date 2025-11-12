@@ -1,0 +1,9 @@
+[build]
+  publish = "User"
+  command = ""
+
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
