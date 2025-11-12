@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://gauthamk.netlify.app/</loc>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://gauthamk.netlify.app/work</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://gauthamk.netlify.app/contact</loc>
+    <priority>0.80</priority>
+  </url>
+</urlset>
