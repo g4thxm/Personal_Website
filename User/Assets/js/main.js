@@ -4,8 +4,6 @@
     'use strict';
 
     
-
-
    /* preloader
     * -------------------------------------------------- */
     const ssPreloader = function() {
@@ -211,8 +209,6 @@
         ssPreloader();
         ssMobileMenu();
         ssSwiper();
-        ssMailChimpForm();
-        ssAlertBoxes();
         ssMoveTo();
 
     })();
