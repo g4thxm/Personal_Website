@@ -3257,7 +3257,7 @@ button.btn--pill {
 
 @media screen and (max-width: 600px) {
 	.clients-list__item a {
-		padding: var(--vspace-1) var(--vspace-0_25);
+		padding: var(--vspace-1) var(--vspace-0_25);	
 	}
 }
 
