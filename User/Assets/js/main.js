@@ -217,9 +217,33 @@
 
     })();
 
-    
+            /* open social links in default app if on mobile */
+        const socialLinks = document.querySelectorAll('.footer-socials a');
 
-    
+        socialLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+
+                // Detect if on mobile
+                if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                    e.preventDefault();
+
+                    if (href.includes('linkedin.com')) {
+                        window.location.href = 'linkedin://in/gauthamkrishnaj';
+                    } else if (href.includes('github.com')) {
+                        window.location.href = href;
+                    } else if (href.includes('instagram.com')) {
+                        window.location.href = 'instagram://user?username=iam._.gautham';
+                    }
+
+                    // fallback if app not installed
+                    setTimeout(() => {
+                        window.open(href, '_blank');
+                    }, 800);
+                }
+            });
+        });
+
 
 })(document.documentElement);
 

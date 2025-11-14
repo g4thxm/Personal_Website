@@ -3367,6 +3367,16 @@ button.btn--pill {
 	color: var(--color-3);
 }
 
+.footer-socials a img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-socials a:hover img {
+  transform: scale(1.15);
+  opacity: 0.8;
+}
+
+
 
 
 /* ------------------------------------------------------------------- 
@@ -3786,6 +3796,7 @@ button.btn--pill {
 
 .contact-social {
 	margin-top: var(--vspace-0_375);
+	
 }
 
 .contact-social svg path {
@@ -3800,5 +3811,19 @@ button.btn--pill {
 .contact-list li {
 	padding-left: 0;
 }
+
+.contact-social li a img,
+.contact-social li a svg {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.contact-social li a:hover img,
+.contact-social li a:hover svg {
+  transform: scale(1.15);
+  opacity: 0.8;
+}
+
+
+
 
 
