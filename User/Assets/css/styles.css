@@ -3220,6 +3220,14 @@ button.btn--pill {
         width: 85%;
         height: 180px;
     }
+
+		@media (hover: none) and (pointer: coarse) {
+    .clients-list__item:hover {
+        transform: none !important;
+        box-shadow: 0 8px 18px rgba(0,0,0,0.1) !important;
+    }
+}
+
 }
 
 
@@ -3694,6 +3702,8 @@ button.btn--pill {
   transform: scale(1.15);
   opacity: 0.8;
 }
+
+
 
 
 
