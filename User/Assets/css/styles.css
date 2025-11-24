@@ -17,7 +17,7 @@
 :root {
 
 	--color-1: hsla(35, 87%, 49%, 1);
-	--color-2: hsla(127, 8%, 22%, 1);
+	--color-2: rgb(52, 61, 53);
 	--color-3: hsla(39, 93%, 95%, 1);
 
   /* theme color variations
@@ -3702,11 +3702,4 @@ button.btn--pill {
   transform: scale(1.15);
   opacity: 0.8;
 }
-
-
-
-
-
-
-
 
