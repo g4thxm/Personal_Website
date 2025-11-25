@@ -3,12 +3,12 @@
         const repoList = document.getElementById("repo-list");
 
         const cardImages = [
-            "Assets/images/card.jpg",
-            "Assets/images/card.jpg",
-            "Assets/images/card.jpg",
-            "Assets/images/card.jpg",
-            "Assets/images/card.jpg",
-            "Assets/images/card.jpg"
+            "Assets/images/card.png",
+            "Assets/images/card.png",
+            "Assets/images/card.png",
+            "Assets/images/card.png",
+            "Assets/images/card.png",
+            "Assets/images/card.png"
         ];
 
         fetch(`https://api.github.com/users/${username}/repos?sort=updated`)

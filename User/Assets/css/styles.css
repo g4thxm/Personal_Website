@@ -2310,6 +2310,7 @@ button.btn--pill {
 }
 
 
+
 /* ===================================================================
  * # SITE HEADER
  *
@@ -3561,13 +3562,6 @@ button.btn--pill {
     transform: translateX(6px);
 }
 
-/* Description */
-.also-desc {
-    font-family: "Space Mono", monospace;
-    font-size: 15px;
-    line-height: 1.7;
-    opacity: 0.85;
-}
 
 /* Social icons */
 .also-socials {
@@ -3590,6 +3584,7 @@ button.btn--pill {
 .also-bigtext {
     position: absolute;
     bottom: 10px;
+		padding-bottom: 30px;
     left: 50%;
     transform: translateX(-50%); /* CENTERED */
     font-family: "Space Mono", monospace;
@@ -3602,64 +3597,70 @@ button.btn--pill {
     z-index: 1;
 		align-items: center;
 }
+/* ==========================================
+   FINAL FIX — BIG TEXT GAUTHAM + GK SWITCH
+========================================== */
 
-/* BASE BIG TEXT — desktop */
+/* Desktop / default */
+.also-bigtext::before {
+    content: "GAUTHAM";
+}
+
 .also-bigtext {
     position: absolute;
-    bottom: 20px;
     left: 50%;
+    bottom: 12px;
     transform: translateX(-50%);
     font-family: "Space Mono", monospace;
     font-weight: 900;
-    font-size: 20vw;  
-    color: rgba(255, 255, 255, 0.05);
-    letter-spacing: -6px;
+
+    /* Perfectly responsive size */
+    font-size: clamp(70px, 18vw, 320px);
+
+    color: #2F2F2F;
+    letter-spacing: -5px;
+    white-space: nowrap;
     pointer-events: none;
     user-select: none;
-    white-space: nowrap;    
     z-index: 1;
 }
 
 /* ==========================================
-             RESPONSIVE
+   RESPONSIVE (MOBILE = GK)
 ========================================== */
 
-/* Tablets */
-@media (max-width: 900px) {
-    .also-bigtext {
-        font-size: 28vw;
-        bottom: 10px;
-    }
-}
-
-/* Large Mobile */
+/* Large phones */
 @media (max-width: 700px) {
+    .also-bigtext::before {
+        content: "GK";
+    }
+
     .also-bigtext {
-        font-size: 38vw;   /* smaller */
+        font-size: clamp(50px, 30vw, 200px);
         bottom: 8px;
     }
 }
 
-/* Medium Mobile */
+/* Small phones */
 @media (max-width: 500px) {
+    .also-bigtext::before {
+        content: "GK";
+    }
+
     .also-bigtext {
-        font-size: 45vw;   /* smaller */
-        bottom: 5px;
+        font-size: clamp(40px, 32vw, 170px);
+        bottom: 6px;
     }
 }
 
-/* Small Mobile */
-@media (max-width: 400px) {
-    .also-bigtext {
-        font-size: 52vw;   /* even smaller */
-        bottom: 5px;
+/* Tiny devices */
+@media (max-width: 380px) {
+    .also-bigtext::before {
+        content: "GK";
     }
-}
 
-/* Ultra-small screens */
-@media (max-width: 330px) {
     .also-bigtext {
-        font-size: 60vw;   /* safe size */
-        bottom: 3px;
+        font-size: clamp(35px, 40vw, 150px);
+        bottom: 5px;
     }
 }
