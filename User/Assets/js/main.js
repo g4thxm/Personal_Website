@@ -138,68 +138,74 @@
 
     /* Back to Top
     * ------------------------------------------------------ */
-    const ssBackToTop = function() {
+   const ssBackToTop = function() {
 
         const pxShow = 900;
-        const goTopButton = document.querySelector(".ss-go-top");
+        const goTopButtons = document.querySelectorAll(".ss-go-top");
 
-        if (!goTopButton) return;
+        if (!goTopButtons.length) return;
 
-        // Show or hide the button
-        if (window.scrollY >= pxShow) goTopButton.classList.add("link-is-visible");
+        // Show or hide both buttons
+            const toggleButtons = () => {
+                goTopButtons.forEach(btn => {
+                    if (window.scrollY >= pxShow) {
+                        btn.classList.add("link-is-visible");
+                    } else {
+                        btn.classList.remove("link-is-visible");
+                    }
+                });
+            };
 
-        window.addEventListener('scroll', function() {
-            if (window.scrollY >= pxShow) {
-                if(!goTopButton.classList.contains('link-is-visible')) goTopButton.classList.add("link-is-visible")
-            } else {
-                goTopButton.classList.remove("link-is-visible")
-            }
-        });
+        // Initial check
+        toggleButtons();
 
-    }; // end ssBackToTop
+        // Scroll listener
+        window.addEventListener('scroll', toggleButtons);
+
+    };
+ // end ssBackToTop
 
 
    /* smoothscroll
     * ------------------------------------------------------ */
-    const ssMoveTo = function() {
+    // const ssMoveTo = function() {
 
-        const easeFunctions = {
-            easeInQuad: function (t, b, c, d) {
-                t /= d;
-                return c * t * t + b;
-            },
-            easeOutQuad: function (t, b, c, d) {
-                t /= d;
-                return -c * t* (t - 2) + b;
-            },
-            easeInOutQuad: function (t, b, c, d) {
-                t /= d/2;
-                if (t < 1) return c/2*t*t + b;
-                t--;
-                return -c/2 * (t*(t-2) - 1) + b;
-            },
-            easeInOutCubic: function (t, b, c, d) {
-                t /= d/2;
-                if (t < 1) return c/2*t*t*t + b;
-                t -= 2;
-                return c/2*(t*t*t + 2) + b;
-            }
-        }
+    //     const easeFunctions = {
+    //         easeInQuad: function (t, b, c, d) {
+    //             t /= d;
+    //             return c * t * t + b;
+    //         },
+    //         easeOutQuad: function (t, b, c, d) {
+    //             t /= d;
+    //             return -c * t* (t - 2) + b;
+    //         },
+    //         easeInOutQuad: function (t, b, c, d) {
+    //             t /= d/2;
+    //             if (t < 1) return c/2*t*t + b;
+    //             t--;
+    //             return -c/2 * (t*(t-2) - 1) + b;
+    //         },
+    //         easeInOutCubic: function (t, b, c, d) {
+    //             t /= d/2;
+    //             if (t < 1) return c/2*t*t*t + b;
+    //             t -= 2;
+    //             return c/2*(t*t*t + 2) + b;
+    //         }
+    //     }
 
-        const triggers = document.querySelectorAll('.smoothscroll');
-        
-        const moveTo = new MoveTo({
-            tolerance: 0,
-            duration: 1200,
-            easing: 'easeInOutCubic',
-            container: window
-        }, easeFunctions);
+    //     const triggers = document.querySelectorAll('.smoothscroll');
+    //     const moveTo = new MoveTo({
+    //     tolerance: 0,
+    //     duration: 700,
+    //     easing: 'easeOutQuad',
+    // }, easeFunctions);
 
-        triggers.forEach(function(trigger) {
-            moveTo.registerTrigger(trigger);
-        });
 
-    }; // end ssMoveTo
+    //     triggers.forEach(function(trigger) {
+    //         moveTo.registerTrigger(trigger);
+    //     });
+
+    // }; // end ssMoveTo
 
 
    /* Initialize

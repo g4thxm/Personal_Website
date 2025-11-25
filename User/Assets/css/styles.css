@@ -310,7 +310,8 @@ video {
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    scroll-snap-type: none;
 }
 
 article,
@@ -1852,18 +1853,21 @@ button.btn--pill {
 /* ------------------------------------------------------------------- 
  * ## skillbars
  * ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- 
+ * ## skillbars
+ * ------------------------------------------------------------------- */
 .skill-bars {
 	list-style: none;
-	margin    : var(--vspace-2) 0 var(--vspace-1);
+	margin: var(--vspace-2) 0 var(--vspace-1);
 }
 
 .skill-bars li {
-	height       : 0.4rem;
-	background   : var(--color-gray-5);
-	width        : 100%;
+	height: 0.4rem;
+	background: var(--color-gray-5);
+	width: 100%;
 	margin-bottom: calc(var(--vspace-2) - 0.4rem);
-	padding      : 0;
-	position     : relative;
+	padding: 0;
+	position: relative;
 }
 
 .skill-bars li strong {
@@ -1879,12 +1883,22 @@ button.btn--pill {
 	line-height   : var(--vspace-0_75);
 }
 
+/* -----------------------------
+   MAIN BAR (START ANIMATION)
+----------------------------- */
+
 .skill-bars li .progress {
 	background: var(--color-text);
 	position  : relative;
 	height    : 100%;
+
+	/* Start at 0 width — animation base */
+	width: 0%;
+	transition: width 1.5s ease;
+	transition-delay: .2s;
 }
 
+/* Percent bubble */
 .skill-bars li .progress span {
 	display      : block;
 	font-family  : var(--font-1);
@@ -1897,7 +1911,13 @@ button.btn--pill {
 	position     : absolute;
 	right        : 0;
 	top          : calc((var(--vspace-1) + 0.8rem) * -1);
+
+	/* Fade-in animation */
+	opacity: 0;
+	transform: translateY(8px);
+	transition: opacity .4s ease, transform .4s ease;
 }
+
 
 .skill-bars li .progress span::after {
 	position        : absolute;
@@ -1911,84 +1931,97 @@ button.btn--pill {
 	content         : "";
 }
 
-.skill-bars li .percent5 {
-	width: 5%;
+/* When JS activates the bar */
+.skill-bars li .progress.active span {
+	opacity: 1;
+	transform: translateY(0);
 }
 
-.skill-bars li .percent10 {
-	width: 10%;
+/* -----------------------------
+   PERCENT WIDTH CLASSES
+   (Stay exactly the same)
+----------------------------- */
+
+.percent5  { width: 5%;  }
+.percent10 { width: 10%; }
+.percent15 { width: 15%; }
+.percent20 { width: 20%; }
+.percent25 { width: 25%; }
+.percent30 { width: 30%; }
+.percent35 { width: 35%; }
+.percent40 { width: 40%; }
+.percent45 { width: 45%; }
+.percent50 { width: 50%; }
+.percent55 { width: 55%; }
+.percent60 { width: 60%; }
+.percent65 { width: 65%; }
+.percent70 { width: 70%; }
+.percent75 { width: 75%; }
+.percent80 { width: 80%; }
+.percent85 { width: 85%; }
+.percent90 { width: 90%; }
+.percent95 { width: 95%; }
+.percent100 { width: 100%; }
+
+/* ---------------------------------------
+   RESPONSIVE SKILL BARS
+--------------------------------------- */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+    .skill-bars li strong {
+        font-size: var(--text-2xs); 
+        letter-spacing: 0.15em;
+        top: -1.8rem;
+    }
+
+    .skill-bars li {
+        margin-bottom: 2rem;
+    }
+
+    .skill-bars li .progress span {
+        font-size: 0.9rem;
+        top: -2.2rem;
+        padding: 4px 8px;
+    }
 }
 
-.skill-bars li .percent15 {
-	width: 15%;
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+    .skill-bars {
+        margin-top: 2rem;
+    }
+
+    .skill-bars li strong {
+        font-size: 0.7rem;
+        top: -1.6rem;
+        letter-spacing: 0.1em;
+    }
+
+    .skill-bars li {
+        height: 0.35rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .skill-bars li .progress span {
+        font-size: 0.75rem;
+        top: -2rem;
+        padding: 3px 6px;
+    }
 }
 
-.skill-bars li .percent20 {
-	width: 20%;
-}
+/* Very small screens (350px and below) */
+@media (max-width: 350px) {
+    .skill-bars li strong {
+        font-size: 0.65rem;
+        top: -1.4rem;
+    }
 
-.skill-bars li .percent25 {
-	width: 25%;
-}
-
-.skill-bars li .percent30 {
-	width: 30%;
-}
-
-.skill-bars li .percent35 {
-	width: 35%;
-}
-
-.skill-bars li .percent40 {
-	width: 40%;
-}
-
-.skill-bars li .percent45 {
-	width: 45%;
-}
-
-.skill-bars li .percent50 {
-	width: 50%;
-}
-
-.skill-bars li .percent55 {
-	width: 55%;
-}
-
-.skill-bars li .percent60 {
-	width: 60%;
-}
-
-.skill-bars li .percent65 {
-	width: 65%;
-}
-
-.skill-bars li .percent70 {
-	width: 70%;
-}
-
-.skill-bars li .percent75 {
-	width: 75%;
-}
-
-.skill-bars li .percent80 {
-	width: 80%;
-}
-
-.skill-bars li .percent85 {
-	width: 85%;
-}
-
-.skill-bars li .percent90 {
-	width: 90%;
-}
-
-.skill-bars li .percent95 {
-	width: 95%;
-}
-
-.skill-bars li .percent100 {
-	width: 100%;
+    .skill-bars li .progress span {
+        font-size: 0.7rem;
+        padding: 3px 6px;
+        top: -1.8rem;
+    }
 }
 
 
@@ -3261,38 +3294,6 @@ button.btn--pill {
 	}
 }
 
-
-/* ------------------------------------------------------------------- 
- * ## copyright
- * ------------------------------------------------------------------- */
-.ss-copyright {
-	margin: 0 var(--vspace-2) 0 0;
-}
-
-.ss-copyright a {
-	color: var(--color-gray-5);
-}
-
-.ss-copyright a:focus,
-.ss-copyright a:hover {
-	color: var(--color-1);
-}
-
-.ss-copyright span {
-	display: inline-block;
-}
-
-.ss-copyright span::after {
-	content: "|";
-	display: inline-block;
-	padding: 0 0.8rem 0 1rem;
-	color  : rgba(255, 255, 255, 0.05);
-}
-
-.ss-copyright span:last-child::after {
-	display: none;
-}
-
 /* ------------------------------------------------------------------- 
  * ## go top
  * ------------------------------------------------------------------- */
@@ -3514,30 +3515,34 @@ button.btn--pill {
 
 
 /* ==========================================
-     ALSO-STYLE FOOTER — GAUTHAM EDITION
+     FOOTER — GAUTHAM EDITION
 ========================================== */
-
+/* MAIN FOOTER */
 .also-footer {
-    background: #000000; /* BLACK FOOTER BACKGROUND */
+    background: #000000;
     background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-    padding: 80px 6vw 100px 6vw; /* pulled upward */
+    padding: 80px 6vw 100px 6vw;
     position: relative;
     overflow: hidden;
     color: var(--color-3);
 }
 
-/* Grid layout */
+/* GRID */
 .also-footer-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 80px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 50px;
+    align-items: start;
+    margin-top: 0;
     position: relative;
     z-index: 2;
-
-    margin-top: -40px; /* move content UP */
+		margin-top: 0 !important;
+    width: 100% !important;
+    align-items: start;
 }
 
-/* Column heading */
+
+/* HEADINGS */
 .also-heading {
     font-family: "Space Mono", monospace;
     color: var(--color-1);
@@ -3545,8 +3550,22 @@ button.btn--pill {
     margin-bottom: 22px;
     letter-spacing: -0.5px;
 }
+.also-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+		align-self: start !important;
+}
 
-/* Links */
+.also-desc {
+    line-height: 1.55;
+    margin-top: 6px;
+		font-family: "Space Mono", monospace;
+		font-size: 16px;
+}
+
+
+/* LINKS */
 .also-col a {
     display: block;
     font-family: "Space Mono", monospace;
@@ -3562,8 +3581,7 @@ button.btn--pill {
     transform: translateX(6px);
 }
 
-
-/* Social icons */
+/* SOCIAL ICONS */
 .also-socials {
     margin-top: 18px;
     display: flex;
@@ -3578,6 +3596,82 @@ button.btn--pill {
 .also-socials img:hover {
     opacity: 1;
     transform: translateY(-4px);
+}
+
+/* ------------------------------------
+   RESPONSIVE (TABLET)
+   ------------------------------------ */
+@media (max-width: 768px) {
+    .also-footer {
+        padding: 60px 5vw 70px 5vw;
+    }
+
+    .also-footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin-top: 0 !important;
+        grid-auto-rows: min-content !important; 
+        align-items: start !important;
+				padding-bottom: 20px;
+    }
+
+    .also-col {
+        gap: 2px !important;
+        align-self: start !important;
+    }
+
+    .also-col a {
+        font-size: 15px;
+        margin: 0 !important; 
+        padding: 0;
+    }
+
+    .also-heading {
+        font-size: 20px;
+    }
+}
+
+
+
+/* ------------------------------------
+   RESPONSIVE (MOBILE)
+   ------------------------------------ */
+@media (max-width: 480px) {
+
+		.also-col {
+					gap: 2px; /* VERY important */
+					align-self: start !important;
+			}
+			
+    .also-footer {
+        padding: 50px 4vw 60px 4vw;
+    }
+
+    .also-footer-grid {
+        grid-template-columns: 1fr; /* STACK */
+        margin-top: 0 !important;
+				gap: 0px;
+				padding-bottom: 20px;
+    }
+
+    .also-heading {
+        font-size: 18px;
+				margin-bottom: 10px;
+    }
+
+    .also-col a {
+        font-size: 14px;
+        margin: 0 !important;
+    }
+
+    .also-socials {
+        gap: 14px;
+    }
+
+    .also-socials img {
+        width: 26px;
+        height: 26px;
+    }
 }
 
 /* GIANT GAUTHAM TEXT (Centered properly) */
@@ -3664,3 +3758,9 @@ button.btn--pill {
         bottom: 5px;
     }
 }
+
+
+
+
+
+
