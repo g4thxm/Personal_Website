@@ -19,6 +19,7 @@
 	--color-1: hsla(35, 87%, 49%, 1);
 	--color-2: rgb(52, 61, 53);
 	--color-3: hsla(39, 93%, 95%, 1);
+	
 
   /* theme color variations
    */
@@ -3231,7 +3232,6 @@ button.btn--pill {
 }
 
 
-
 .s-cta {
 	padding-top     : var(--vspace-4_5);
 	padding-bottom  : var(--vspace-3_5);
@@ -3259,82 +3259,6 @@ button.btn--pill {
 		margin-right: 0;
 	}
 }
-
-
-
-/* ===================================================================
- * # FOOTER
- *
- *
- * ------------------------------------------------------------------- */
-.s-footer {
-	font-size       : calc(var(--text-size) * 0.95);
-	font-weight     : 300;
-	color           : rgba(255, 255, 255, 0.6);
-	background-color: #181818;
-	padding-top     : var(--vspace-3);
-	padding-bottom  : var(--vspace-3);
-}
-
-.s-footer a {
-	color: var(--color-1);
-}
-
-.s-footer a:focus,
-.s-footer a:hover {
-	color: var(--color-3-dark);
-}
-
-.s-footer h3 {
-	color     : var(--color-3);
-	margin-top: 0;
-}
-
-.s-footer__block {
-	margin-bottom: var(--vspace-0_5);
-}
-
-.s-footer__about>* {
-	width: min(100%, 560px);
-	margin-left: -20px; 
-}
-
-.s-footer__bottom {
-	font-size : calc(var(--text-size) * 0.85);
-	color     : rgba(255, 255, 255, 0.25);
-	margin-top: var(--vspace-0_5);
-	position  : relative;
-}
-
-.s-footer .link-list {
-	list-style : none;
-	margin-left: 0;
-}
-
-.s-footer .link-list li {
-	padding-left: 0;
-}
-
-.s-footer .link-list a {
-	color : rgba(255, 255, 255, 0.6);
-	border: none;
-}
-
-.s-footer .link-list a:focus,
-.s-footer .link-list a:hover {
-	color: var(--color-3);
-}
-
-.footer-socials a img {
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.footer-socials a:hover img {
-  transform: scale(1.15);
-  opacity: 0.8;
-}
-
-
 
 
 /* ------------------------------------------------------------------- 
@@ -3407,52 +3331,6 @@ button.btn--pill {
 	stroke    : var(--color-3);
 	transition: all 0.3s ease-in-out;
 }
-
-/* ------------------------------------------------------------------- 
- * responsive:
- * footer
- * ------------------------------------------------------------------- */
-@media screen and (max-width: 1200px) {
-	.ss-copyright {
-		margin-top: var(--vspace-0_5);
-	}
-
-	.ss-go-top {
-		bottom: var(--vspace-0_25);
-	}
-}
-
-@media screen and (max-width: 1000px) {
-	.s-footer__about>* {
-		width: 100%;
-	}
-}
-
-@media screen and (max-width: 600px) {
-	.ss-copyright span {
-		display: block;
-	}
-
-	.ss-copyright span::after {
-		display: none;
-	}
-
-	.ss-go-top {
-		right : calc(6vw + 1rem);
-		bottom: var(--vspace-0_5);
-	}
-
-	.ss-go-top a {
-		height: var(--vspace-1_5);
-		width : var(--vspace-1_5);
-	}
-
-	.ss-go-top svg {
-		height: var(--vspace-0_75);
-		width : var(--vspace-0_75);
-	}
-}
-
 
 /* post navigation
  */
@@ -3633,73 +3511,155 @@ button.btn--pill {
 	margin-top: 0;
 }
 
-/* --------------------------------------------------------------------
- * ## contact page
- * -------------------------------------------------------------------- */
-.contact-cta {
-	margin-bottom: var(--vspace-2);
+
+/* ==========================================
+     ALSO-STYLE FOOTER — GAUTHAM EDITION
+========================================== */
+
+.also-footer {
+    background: #000000; /* BLACK FOOTER BACKGROUND */
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    padding: 80px 6vw 100px 6vw; /* pulled upward */
+    position: relative;
+    overflow: hidden;
+    color: var(--color-3);
 }
 
-.contact-btn {
-	display        : flex;
-	justify-content: center;
-	align-items    : center;
+/* Grid layout */
+.also-footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+    position: relative;
+    z-index: 2;
+
+    margin-top: -40px; /* move content UP */
 }
 
-.contact-btn svg {
-	margin-right: 1rem;
-	height      : var(--vspace-0_75);
-	width       : var(--vspace-0_75);
+/* Column heading */
+.also-heading {
+    font-family: "Space Mono", monospace;
+    color: var(--color-1);
+    font-size: 22px;
+    margin-bottom: 22px;
+    letter-spacing: -0.5px;
 }
 
-.contact-btn svg path {
-	fill: var(--color-text);
+/* Links */
+.also-col a {
+    display: block;
+    font-family: "Space Mono", monospace;
+    font-size: 16px;
+    color: var(--color-3);
+    opacity: 0.85;
+    margin: 9px 0;
+    transition: 0.25s ease;
 }
 
-.contact-block {
-	margin-bottom: var(--vspace-1_25);
+.also-col a:hover {
+    opacity: 1;
+    transform: translateX(6px);
 }
 
-.contact-block a {
-	color: var(--color-text);
+/* Description */
+.also-desc {
+    font-family: "Space Mono", monospace;
+    font-size: 15px;
+    line-height: 1.7;
+    opacity: 0.85;
 }
 
-.contact-block a:focus,
-.contact-block a:hover {
-	color: var(--color-link);
+/* Social icons */
+.also-socials {
+    margin-top: 18px;
+    display: flex;
+    gap: 16px;
 }
 
-.contact-block h6 {
-	margin-top   : 0;
-	margin-bottom: var(--vspace-0_125);
+.also-socials img {
+    opacity: 0.65;
+    transition: 0.3s;
 }
 
-.contact-social {
-	margin-top: var(--vspace-0_375);
-	
+.also-socials img:hover {
+    opacity: 1;
+    transform: translateY(-4px);
 }
 
-.contact-social svg path {
-	fill: var(--color-text);
+/* GIANT GAUTHAM TEXT (Centered properly) */
+.also-bigtext {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%); /* CENTERED */
+    font-family: "Space Mono", monospace;
+    font-weight: 900;
+    font-size: 22vw;
+    color: rgba(255, 255, 255, 0.05);  /* faint light grey */
+    letter-spacing: -8px;
+		user-select: none;
+    pointer-events: none;
+    z-index: 1;
+		align-items: center;
 }
 
-.contact-list {
-	list-style : none;
-	margin-left: 0;
+/* BASE BIG TEXT — desktop */
+.also-bigtext {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Space Mono", monospace;
+    font-weight: 900;
+    font-size: 20vw;  
+    color: rgba(255, 255, 255, 0.05);
+    letter-spacing: -6px;
+    pointer-events: none;
+    user-select: none;
+    white-space: nowrap;    
+    z-index: 1;
 }
 
-.contact-list li {
-	padding-left: 0;
+/* ==========================================
+             RESPONSIVE
+========================================== */
+
+/* Tablets */
+@media (max-width: 900px) {
+    .also-bigtext {
+        font-size: 28vw;
+        bottom: 10px;
+    }
 }
 
-.contact-social li a img,
-.contact-social li a svg {
-  transition: transform 0.3s ease, opacity 0.3s ease;
+/* Large Mobile */
+@media (max-width: 700px) {
+    .also-bigtext {
+        font-size: 38vw;   /* smaller */
+        bottom: 8px;
+    }
 }
 
-.contact-social li a:hover img,
-.contact-social li a:hover svg {
-  transform: scale(1.15);
-  opacity: 0.8;
+/* Medium Mobile */
+@media (max-width: 500px) {
+    .also-bigtext {
+        font-size: 45vw;   /* smaller */
+        bottom: 5px;
+    }
 }
 
+/* Small Mobile */
+@media (max-width: 400px) {
+    .also-bigtext {
+        font-size: 52vw;   /* even smaller */
+        bottom: 5px;
+    }
+}
+
+/* Ultra-small screens */
+@media (max-width: 330px) {
+    .also-bigtext {
+        font-size: 60vw;   /* safe size */
+        bottom: 3px;
+    }
+}
