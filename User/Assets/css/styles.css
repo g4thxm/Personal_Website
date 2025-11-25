@@ -1985,6 +1985,37 @@ button.btn--pill {
         padding: 4px 8px;
     }
 }
+/* Skill Bars — Mobile */
+@media (max-width: 600px) {
+
+    /* Increase space between each bar */
+    .skill-bars li {
+        height: 0.28rem;                   
+        margin-bottom: 34px !important;    
+    }
+
+    /* Increase title height above bar */
+    .skill-bars li strong {
+        font-size: 0.82rem;
+        top: -2.1rem !important;   /* moved higher */
+        letter-spacing: 0.12em;   
+    }
+
+    /* Keep bar thin */
+    .skill-bars li .progress {
+        height: 0.28rem !important;        
+    }
+
+    /* Percentage bubble repositioned */
+    .skill-bars li .progress span {
+        font-size: 0.75rem;
+        padding: 3px 6px;
+        top: -2.7rem !important;  /* bubble raised slightly */
+    }
+}
+
+
+
 
 /* Mobile (480px and below) */
 @media (max-width: 480px) {
