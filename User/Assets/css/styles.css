@@ -1972,11 +1972,11 @@ button.btn--pill {
     .skill-bars li strong {
         font-size: var(--text-2xs); 
         letter-spacing: 0.15em;
-        top: -1.8rem;
+        top: -2.5rem;
     }
 
     .skill-bars li {
-        margin-bottom: 2rem;
+        margin-bottom: 39px;
     }
 
     .skill-bars li .progress span {
@@ -3550,7 +3550,8 @@ button.btn--pill {
 ========================================== */
 /* MAIN FOOTER */
 .also-footer {
-    background: #000000;
+    background-color        : var(--color-2-dark) !important;
+	  background              : linear-gradient(20deg, hsl(130deg, 8%, 14%) 40%, hsl(0deg, 0%, 13%) 100%);
     background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
     padding: 80px 6vw 100px 6vw;
     position: relative;
@@ -3741,8 +3742,7 @@ button.btn--pill {
 
     /* Perfectly responsive size */
     font-size: clamp(70px, 18vw, 320px);
-
-    color: #2F2F2F;
+		color: hsla(265, 15%, 22%, 1);
     letter-spacing: -5px;
     white-space: nowrap;
     pointer-events: none;
@@ -3789,6 +3789,8 @@ button.btn--pill {
         bottom: 5px;
     }
 }
+
+
 
 
 
