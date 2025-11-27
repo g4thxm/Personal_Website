@@ -2921,6 +2921,62 @@ button.btn--pill {
 	stroke: var(--color-3);
 }
 
+.footer-go-top {
+    position: absolute;
+    right: 30px;
+    bottom: 30px; 
+    z-index: 10;
+		opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+footer.s-footer.also-footer {
+    position: relative; 
+}
+
+.footer-arrow-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15); /* light white tint */
+    border: 1px solid rgba(255, 255, 255, 0.35); /* brighter border */
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+
+.footer-arrow-icon:hover {
+    /* background: rgba(255, 255, 255, 0.18); */
+		background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-5px);
+}
+
+/* Reveal animation */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (max-width: 480px) {
+    .footer-go-top {
+        right: 15px;
+        bottom: 20px;
+    }
+
+    .footer-arrow-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+
 .ss-home .s-header__inner,
 .s-intro__content-media img,
 .s-intro__content-media .lines,

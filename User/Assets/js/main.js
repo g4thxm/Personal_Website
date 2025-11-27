@@ -1,4 +1,3 @@
-
 (function(html) {
 
     'use strict';
@@ -46,7 +45,8 @@
             siteBody.classList.toggle('menu-is-open');
         });
 
-        mainNavWrap.querySelectorAll('.s-header__nav a').forEach(function(link) {
+        // fix: query anchors inside mainNavWrap
+        mainNavWrap.querySelectorAll('a').forEach(function(link) {
 
             link.addEventListener("click", function(event) {
 
@@ -168,44 +168,70 @@
 
    /* smoothscroll
     * ------------------------------------------------------ */
-    // const ssMoveTo = function() {
+    const ssMoveTo = function() {
 
-    //     const easeFunctions = {
-    //         easeInQuad: function (t, b, c, d) {
-    //             t /= d;
-    //             return c * t * t + b;
-    //         },
-    //         easeOutQuad: function (t, b, c, d) {
-    //             t /= d;
-    //             return -c * t* (t - 2) + b;
-    //         },
-    //         easeInOutQuad: function (t, b, c, d) {
-    //             t /= d/2;
-    //             if (t < 1) return c/2*t*t + b;
-    //             t--;
-    //             return -c/2 * (t*(t-2) - 1) + b;
-    //         },
-    //         easeInOutCubic: function (t, b, c, d) {
-    //             t /= d/2;
-    //             if (t < 1) return c/2*t*t*t + b;
-    //             t -= 2;
-    //             return c/2*(t*t*t + 2) + b;
-    //         }
-    //     }
+        // Select all internal anchors except plain '#' or '#0'
+        const triggers = document.querySelectorAll('a[href^="#"]:not([href="#"]):not([href="#0"])');
 
-    //     const triggers = document.querySelectorAll('.smoothscroll');
-    //     const moveTo = new MoveTo({
-    //     tolerance: 0,
-    //     duration: 700,
-    //     easing: 'easeOutQuad',
-    // }, easeFunctions);
+        if (!triggers.length) return;
 
+        // Remove hash from URL without creating a new history entry
+        function clearHashFromUrl() {
+            const clean = window.location.pathname + window.location.search;
+            history.replaceState(null, '', clean);
+        }
 
-    //     triggers.forEach(function(trigger) {
-    //         moveTo.registerTrigger(trigger);
-    //     });
+        triggers.forEach(function(trigger) {
+            trigger.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
 
-    // }; // end ssMoveTo
+                // ensure it's an in-page anchor
+                if (!href || href.charAt(0) !== '#') return;
+
+                // skip if target doesn't exist
+                const target = document.querySelector(href);
+                if (!target) return;
+
+                e.preventDefault();
+
+                // Close mobile menu if open (keeps UX consistent)
+                const siteBody = document.querySelector('body');
+                const toggleButton = document.querySelector('.s-header__menu-toggle');
+                if (window.matchMedia('(max-width: 900px)').matches && siteBody.classList.contains('menu-is-open')) {
+                    if (toggleButton) toggleButton.classList.remove('is-clicked');
+                    siteBody.classList.remove('menu-is-open');
+                }
+
+                // Smooth scroll
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                // Accessibility: focus target
+                const hadTabIndex = target.hasAttribute('tabindex');
+                if (!hadTabIndex) target.setAttribute('tabindex', '-1');
+                target.focus({ preventScroll: true });
+
+                if (!hadTabIndex) {
+                    // cleanup temporary tabindex after a bit
+                    setTimeout(() => { target.removeAttribute('tabindex'); }, 1000);
+                }
+
+                // Remove fragment from address bar immediately (no new history entry)
+                clearHashFromUrl();
+            });
+        });
+
+        // If user opened the page with a hash, let browser scroll then remove it
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.location.hash) {
+                const target = document.querySelector(window.location.hash);
+                if (target) {
+                    setTimeout(clearHashFromUrl, 250);
+                } else {
+                    clearHashFromUrl();
+                }
+            }
+        });
+    }; // end ssMoveTo
 
 
    /* Initialize
@@ -216,7 +242,7 @@
         ssMobileMenu();
         ssSwiper();
         ssMoveTo();
-
+        ssBackToTop();
     })();
 
             /* open social links in default app if on mobile */
@@ -246,12 +272,8 @@
             });
         });
 
-        
 
-
+        window.addEventListener("load", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
 })(document.documentElement);
-
-
-
-
-
