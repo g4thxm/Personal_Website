@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-<head>
 
     <!-- Basic Page Needs
     ================================================== -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portfolio | GK</title>
-    <meta name="keywords" content="Gautham K, portfolio, web developer,Gk,Gk porfolio">
-    <meta name="description" content="Welcome to the portfolio of Gautham K — a passionate developer showcasing creative projects, skills, and achievements. Explore my work and get in touch!">
+
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#111111">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+    <title>Gautham Krishna J | Software Developer</title>
+    <meta name="description"
+      content="Portfolio of Gautham Krishna J, a Full-Stack Developer specializing in Laravel, PHP, JavaScript, MySQL, and modern web applications.">
+    <meta name="keywords"
+      content="Gautham Krishna J, Full Stack Developer, Laravel Developer, PHP Developer, JavaScript, MySQL, Web Developer, Portfolio, Kerala">
     <meta name="author" content="Gautham K">
     <meta name="google-site-verification" content="W-QTRH-VdQBlH9ousJHzZ9ayV_mROkAspFEJHgaWFfY" />
+
+    <meta name="author" content="Gautham Krishna J">
+    <meta name="copyright" content="© 2026 Gautham Krishna J">
+    <meta name="creator" content="Gautham Krishna J">
+    <meta name="publisher" content="Gautham Krishna J">
+    <meta name="owner" content="Gautham Krishna J">
+    <meta name="rights" content="All Rights Reserved">
 
     <!-- JavaScript Class Switch
     ================================================== -->
@@ -41,22 +54,40 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
-</head>
 
+    <meta http-equiv="Content-Security-Policy"
+        content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data: https:;
+        connect-src 'self' https://api.github.com;
+        object-src 'none';
+        frame-src 'none';
+        base-uri 'self';
+        form-action 'self';
+        upgrade-insecure-requests;">
+</head>
 
 
 <body id="top">
 
+    <div id="preloader">
+        <div id="loader">
+            <img src="/loadericon.png" alt="Gautham Krishna Logo">
+        </div>
+    </div>
 
     <!-- preloader
     ================================================== -->
-    <div id="preloader">
+    <!-- <div id="preloader">
         <div id="loader" class="dots-fade">
             <div></div>
             <div></div>
             <div></div>
         </div>
-    </div>
+    </div> -->
 
 
     <!-- page wrap
@@ -64,7 +95,7 @@
     <div id="page" class="s-pagewrap ss-home">
 
 
-         <!-- # site header 
+      <!-- # site header 
         ================================================== -->
         <header class="s-header">
              <div class="row s-header__inner width-sixteen-col">
@@ -83,11 +114,17 @@
                             <li><a href="#about">About</a></li>
                             <li><a href="#certificates">Certificates</a></li>
                             <li><a href="#works">Works</a></li>
+                            <li class="s-header__resume-item">
+                                <a href="Assets/CVResume.pdf" target="_blank" rel="noopener noreferrer" class="s-header__resume-link">Resume</a>
+                            </li>
                             <!-- <li><a href="contact.html">Contact</a></li> -->
                         </ul> <!-- s-header__menu-links -->
 
                         <div class="s-header__contact">
-                            <a href="#contact" class="btn btn--primary u-fullwidth s-header__contact-btn">Contact</a>                        
+                            <div class="s-header__contact-slot">
+                                <!-- <a href="Assets/CVResume.pdf" target="_blank" rel="noopener" class="s-header__resume-btn">Resume</a> -->
+                                <a href="#contact" class="btn btn--primary u-fullwidth s-header__contact-btn">Contact</a>
+                            </div>
                         </div> 
         
                     </nav> <!-- end s-header__nav -->
@@ -112,17 +149,17 @@
                             <div class="s-intro__content-text">
                                 <div class="s-intro__content-pretitle text-pretitle">Welcome</div>
                                 <h1 class="s-intro__content-title">
-                                Myself<br>
+                                Hi, I'm<br>
                                 Gautham Krishna J<br>
-                                Student at <br>
-                                DCSMAT</br>
+                                BCA Graduate<br>
+                                <!-- DCSMAT</br> -->
                                 </h1>
                             </div> <!-- s-intro__content-text -->
 
                             <div class="s-intro__content-media">
                                 <div class="intro-media-card">
                                     <div class="intro-media-glass">
-                                        <img src="Assets/images/intro.png" alt="GK Profile" class="intro-media-img" />
+                                        <img src="Assets/images/intro.jpg" alt="GK Profile" class="intro-media-img" />
                                     </div>
                                 </div>
                             </div>                   
@@ -159,24 +196,22 @@
                             <div class="section-header grid-section-split__header">
                                 <div class="text-pretitle"></div>                           
                                 <h2 class="text-display-title">
-                                    About Me!
-                                </h2>                           
+                                    Who I Am
+                                </h2>                          
                             </div> <!-- end section-header -->
 
                             <div class="s-about__content-main grid-section-split__primary">
                                 <p class="attention-getter">
-                                Hey there! I’m Gautham Krishna J, a BCA student at DCSMAT Institutions, Kerala, who loves everything about technology, coding, and creativity. I enjoy building websites, learning new programming languages, and experimenting with cool ideas that solve real problems.
+                                Hi, I'm Gautham Krishna J, a BCA graduate from DCSMAT Institutions, Kerala, passionate about building modern web applications and solving real-world problems through technology.
                                 </p>
 
                                 <p class="attention-getter">
-                                I’m comfortable working with PHP, C++, HTML, CSS, and JavaScript, and I’m always curious to explore new tools and frameworks. Whether it’s designing a clean interface or fixing a tricky bug, I find joy in the process of learning and improving.
+                                I specialize in Laravel, PHP, JavaScript, MySQL, HTML, and CSS, with experience developing responsive websites and full-stack applications. I enjoy writing clean, maintainable code and continuously expanding my skills by learning new frameworks and tools.
                                 </p>
 
                                 <p class="attention-getter">
-                                When I’m not coding, you’ll probably find me listening to music, exploring new tech trends, or helping friends understand programming concepts. I believe that technology is all about sharing knowledge and creating things that make life better.
+                                    I'm eager to contribute to impactful software projects while continuously growing as a full-stack developer and delivering reliable, user-focused solutions.                              
                                 </p>
-
-                            
                             </div>
                         
                         </div> <!-- content-inner -->
@@ -254,6 +289,8 @@
 
                 </section> <!-- end s-expertise -->
 
+                
+
                 <!-- certificates
                 ----------------------------------------------- -->
                 <section id="certificates" class="s-clients">          
@@ -284,19 +321,19 @@
                     
                             <div class="clients-list">                            
                             <div class="clients-list">
-                                    <a href="https://drive.google.com/file/d/1tfFmzQgDEiOszFeuFX-X127aHOSUtAg_/view?usp=sharing" target="_blank" class="clients-list__item">
+                                    <a href="Assets/Certificates/SpectrumCertificate.pdf" target="_blank" rel="noopener noreferrer" class="clients-list__item">
                                         <img src="Assets/images/certificates/spec.png" alt="">
                                     </a>
 
-                                    <a href="https://drive.google.com/file/d/18wBksSiV0kusJgXtXqG4CzV5wOx8fohF/view?usp=sharing" target="_blank" class="clients-list__item" >
+                                    <a href="Assets/Certificates/ICTCertificate.pdf" target="_blank" rel="noopener noreferrer" class="clients-list__item" >
                                         <img src="Assets/images/certificates/ict.png" alt="">
                                     </a>
 
-                                    <a href="https://drive.google.com/file/d/1nZvNp6t6qAqto5-mcufP2AyqX031Yrua/view?usp=sharing" target="_blank" class="clients-list__item">
+                                    <a href="Assets/Certificates/360Certificate.pdf" target="_blank" rel="noopener noreferrer"  class="clients-list__item">
                                         <img src="Assets/images/certificates/360.png" alt="">
                                     </a>
 
-                                    <a href="https://drive.google.com/file/d/1JlhXmOA9wJa4x-GfNzhxpiWNB_Ms07xO/view?usp=sharing" target="_blank" class="clients-list__item">
+                                    <a href="Assets/Certificates/Pro1Certificate.pdf" target="_blank" rel="noopener noreferrer" class="clients-list__item">
                                         <img src="Assets/images/certificates/pro1.png" alt="">
                                     </a>
                                 </div>
@@ -310,153 +347,251 @@
             </section> <!-- s-content-->
 
         
-            <div class="row u-add-half-bottom"> <!--Skill Bars-->
-                <div class="column xl-6 md-12">
-                    <h3 class="u-add-bottom">My Skills</h3>
+           <div class="row u-add-half-bottom skills-showcase"> <!-- Animated Skills Showcase -->
+    <div class="column xl-12">
+        <h3 class="u-add-bottom">My Skills</h3>
 
-                    <ul class="skill-bars">
-                    <li>
-                        <strong>MySQL</strong>
-                        <div class="progress percent80"><span>80%</span></div>
-                    </li>
-                    <li>
-                        <strong>HTML & CSS</strong>
-                        <div class="progress percent85"><span>85%</span></div>
-                    </li>
-                    <li>
-                        <strong>JavaScript</strong>
-                        <div class="progress percent40"><span>40%</span></div>
-                    </li>
-                    <li>
-                        <strong>PHP</strong>
-                        <div class="progress percent90"><span>90%</span></div>
-                    </li>
-                    <li>
-                        <strong>Python</strong>
-                        <div class="progress percent50"><span>50%</span></div>
-                    </li>
-                    <li>
-                        <strong>C & C++</strong>
-                        <div class="progress percent75"><span>75%</span></div>
-                    </li>
-                    </ul>
-                </div>
-            </div> <!--End Skill Bars-->
+        <div class="skills-marquee">
+            <div class="skills-track skills-track--left">
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/mysql.svg" alt="MySQL">MySQL</div>
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/html5.svg" alt="HTML5">HTML & CSS</div>
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/javascript.svg" alt="JavaScript">JavaScript</div>
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/php.svg" alt="PHP">PHP</div>
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/laravel.svg" alt="Laravel">Laravel</div>
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/python.svg" alt="Python">Python</div>
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/cplusplus.svg" alt="C++">C & C++</div>
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/tailwind.svg" alt="Tailwind CSS">Tailwind CSS</div>
 
-        <section id="works" class="s-content">
+                <!-- duplicated for seamless loop -->
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/mysql.svg" alt="MySQL">MySQL</div>
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/html5.svg" alt="HTML5">HTML & CSS</div>
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/javascript.svg" alt="JavaScript">JavaScript</div>
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/php.svg" alt="PHP">PHP</div>
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/laravel.svg" alt="Laravel">Laravel</div>
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/python.svg" alt="Python">Python</div>
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/cplusplus.svg" alt="C++">C & C++</div>
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/tailwind.svg" alt="Tailwind CSS">Tailwind CSS</div>
+            </div>
 
-            <!-- GitHub Projects Section -->
-            <section id="works" class="s-clients">          
+            <div class="skills-track skills-track--right">
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/tailwind.svg" alt="Tailwind CSS">Tailwind CSS</div>
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/cplusplus.svg" alt="C++">C & C++</div>
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/python.svg" alt="Python">Python</div>
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/laravel.svg" alt="Laravel">Laravel</div>
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/php.svg" alt="PHP">PHP</div>
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/javascript.svg" alt="JavaScript">JavaScript</div>
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/html5.svg" alt="HTML5">HTML & CSS</div>
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/mysql.svg" alt="MySQL">MySQL</div>
 
-            <!-- WORKS SECTION HEADER (Matches Certificates Layout) -->
+                <!-- duplicated for seamless loop -->
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/tailwind.svg" alt="Tailwind CSS">Tailwind CSS</div>
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/cplusplus.svg" alt="C++">C & C++</div>
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/python.svg" alt="Python">Python</div>
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/laravel.svg" alt="Laravel">Laravel</div>
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/php.svg" alt="PHP">PHP</div>
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/javascript.svg" alt="JavaScript">JavaScript</div>
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/html5.svg" alt="HTML5">HTML & CSS</div>
+                <div class="skill-card"><img class="skill-icon" src="Assets/icons/mysql.svg" alt="MySQL">MySQL</div>
+            </div>
+        </div>
+    </div>
+</div> <!-- End Skills Showcase -->
+
+       <!-- ==========================================
+            WORKS SECTION
+        ========================================== -->
+
+        <section id="works" class="s-clients">
+
+            <!-- Header -->
             <div class="row s-clients__content-block width-sixteen-col">
+
                 <div class="column xl-12 grid-block grid-section-split">
-                
+
                     <div class="section-header grid-section-split__header">
 
                         <h2 class="text-display-title">
                             Works<br>
                             &<br>
-                            Projects<br>
-                        </h2>       
-                    </div> <!-- end section-header -->
-                
+                            Projects
+                        </h2>
+
+                    </div>
+
                     <div class="grid-section-split__primary">
+
                         <p class="lead">
-                        <p>Here are some of the projects I’ve built and published on GitHub. Each project reflects my learning, creativity, and development journey — blending design, logic, and effort into user-friendly builds.</p>
-                    </div> <!-- end grid-section-split__primary -->
-                
-                </div> <!-- end column -->
-            </div> <!-- end row -->
+                            Here are some of the projects I've built and published on GitHub. Each project reflects my learning, creativity, and development journey—blending design, logic, and effort into user-friendly software.
+                        </p>
 
-            <!-- WORKS GRID (Identical layout to certificate gallery) -->
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Projects -->
             <div class="row s-clients__content-block width-sixteen-col">
+
                 <div class="column xl-12">
-            
-                    <div class="clients-list">                            
-                    <div class="clients-list" id="repo-list" 
-                            style="display:flex; flex-wrap:wrap; gap:30px; justify-content:center;">
-                            <!-- GitHub Repo Cards Will Auto-Load Here -->
-                    </div>
+
+                    <div id="repo-list" class="project-grid">
+
+                        <!-- GitHub Projects Load Here -->
+
                     </div>
 
-                </div> <!-- end column -->
-            </div> <!-- end row -->
+                </div>
 
-    </section><!--End Github projects Section -->
-                
+            </div>
+
+        </section>
+
+
     <!-- # footer -->
-    <section id="contact">
-        <footer class="s-footer also-footer">
+<section id="contact">
+    <footer class="s-footer also-footer">
 
-            <div class="also-footer-grid">
+        <div class="also-footer-grid">
 
-                <!-- COLUMN 1 -->
-                <div class="also-col">
-                    <h4 class="also-heading">Explore</h4>
-                    <a href="#about">ABOUT ME</a>
-                    <a href="#works">PROJECTS</a>
-                    <a href="#certificates">CERTIFICATIONS</a>
-                    <a href="https://drive.google.com/file/d/1FCjr3SHTLktuAwTb-zFEo6zBrfDKskR2/view?usp=sharing">RESUME</a>
+            <!-- COLUMN 1 -->
+            <div class="also-col">
+                <h4 class="also-heading">Quick Links</h4>
+
+                <a href="#about">About</a>
+                <a href="#works">Projects</a>
+                <a href="#certificates">Certificates</a>
+                <a href="Assets/CVResume.pdf" target="_blank" rel="noopener noreferrer">
+                    Resume
+                </a>
+            </div>  
+
+            <!-- COLUMN 2 -->
+            <div class="also-col">
+                <h4 class="also-heading">Contact</h4>
+
+                <a id="emailLink" href="#" aria-label="Email Gautham">
+                    📧 Loading...
+                </a>
+
+                <a href="tel:+918848576524">
+                    📱 +91 88485 76524
+                </a>
+
+                <a class="footer-info">
+                    📍 Kerala, India
+                </a>
+
+                <a class="footer-info available">
+                    🟢 Open to Software Developer Opportunities
+                </a >
+
+                <div class="also-socials">
+                    <a href="https://www.linkedin.com/in/gauthamkrishnaj/" target="_blank" aria-label="LinkedIn">
+                        <img src="Assets/images/icons/linkedin.png" width="26" alt="LinkedIn">
+                    </a>
+
+                    <a href="https://github.com/g4thxm" target="_blank" aria-label="GitHub">
+                        <img src="Assets/images/icons/github.png" width="26" alt="GitHub">
+                    </a>
+
+                    <a href="https://www.instagram.com/iam._.gautham" target="_blank" aria-label="Instagram">
+                        <img src="Assets/images/icons/instagram.png" width="26" alt="Instagram">
+                    </a>
                 </div>
+            </div>
 
-                <!-- COLUMN 2 -->
-                <div class="also-col">
-                    <h4 class="also-heading">Contact</h4>
-                    <a href="mailto:gauthamk357@gmail.com?subject=Inquiry%20from%20Portfolio&body=Hi%20Gautham,%0D%0A"
-                            onclick="if(!/Mobi|Android/i.test(navigator.userAgent)){window.open('https://mail.google.com/mail/?view=cm&fs=1&to=gauthamk357@gmail.com&su=Inquiry%20from%20Portfolio&body=Hi%20Gautham,%0D%0A', '_blank'); return false;}">gauthamk357@gmail.com</a>
-                    <a href="tel:+918848576524">+91 88485 76524</a>
+            <!-- COLUMN 3 -->
+            <div class="also-col">
+                <h4 class="also-heading">From GK.</h4>
 
-                    <div class="also-socials">
-                        <a href="https://www.linkedin.com/in/gauthamkrishnaj/" target="_blank">
-                            <img src="Assets/images/icons/linkedin.png" width="22">
-                        </a>
-                        <a href="https://github.com/g4thxm" target="_blank">
-                            <img src="Assets/images/icons/github.png" width="22">
-                        </a>
-                        <a href="https://www.instagram.com/iam._.gautham" target="_blank">
-                            <img src="Assets/images/icons/instagram.png" width="22">
-                        </a>
-                    </div>
-                </div>
+                <p class="also-desc">
+                    Thanks for visiting my portfolio. I'm passionate about building
+                    modern web applications and continuously learning new
+                    technologies. If you'd like to discuss an opportunity,
+                    collaborate on a project, or simply connect, I'd love to hear
+                    from you.
+                </p>
 
-                <!-- COLUMN 3 -->
-                <div class="also-col">
-                    <h4 class="also-heading">From GK.</h4>
-                    <p class="also-desc">
-                        Thank you for visiting! I appreciate you taking the time to explore my work.  
-                        Let’s connect and create something extraordinary together.
-                    </p>
-                </div>
-             </div>
-            <!-- BIG GAUTHAM TEXT -->
-            <div class="also-bigtext"></div>
-
-            <div class="footer-go-top">
-                <a href="#top" class="smoothscroll" title="Back to Top">
-                    <div class="footer-arrow-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                            viewBox="0 0 24 24" fill="none" stroke="#97b34a"
-                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="17 11 12 6 7 11"></polyline>
-                            <line x1="12" y1="6" x2="12" y2="18"></line>
-                        </svg>
-                    </div>
+                <a id="connectBtn" href="#" class="btn btn--primary">
+                    Let's Connect →
                 </a>
             </div>
 
-        </footer><!-- end s-footer -->
-    </section> 
+        </div>
+
+
+        <!-- BIG NAME -->
+        <div class="also-bigtext">
+        </div>
+
+            <!-- COPYRIGHT -->
+        <div class="footer-copyright">
+            <p>© 2026 Gautham Krishna J. All Rights Reserved.</p>
+        </div>
+
+        
+        <!-- BACK TO TOP -->
+        <div class="footer-go-top">
+            <a href="#top" class="smoothscroll" title="Back to Top">
+                <div class="footer-arrow-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#97b34a"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <polyline points="17 11 12 6 7 11"></polyline>
+                        <line x1="12" y1="6" x2="12" y2="18"></line>
+                    </svg>
+                </div>
+            </a>
+        </div>
+
+    </footer>
+     <!-- <div class="site-bottom-bar">
+    <p>© 2026 Gautham Krishna J. All Rights Reserved.</p>
+</div> -->
+</section>
 </div> <!-- end page-wrap -->
 
+</div> <!-- end page-wrap -->
 
-   
+<!-- COMMAND PALETTE -->
+<div id="commandPalette" class="command-palette">
+    <div class="command-box">
+
+        <input
+            id="commandInput"
+            type="text"
+            placeholder="Search anything..."
+            autocomplete="off"
+            spellcheck="false">
+
+        <ul id="commandList">
+
+            <li data-link="#about">👤 About</li>
+            <li data-link="#works">💼 Projects</li>
+            <li data-link="#certificates">📜 Certificates</li>
+            <li data-link="Assets/CVResume.pdf">📄 Resume</li>
+            <li data-link="https://github.com/g4thxm">🐙 GitHub</li>
+            <li data-link="https://linkedin.com/in/gauthamkrishnaj">💼 LinkedIn</li>
+            <li data-link="mailto:gauthamk357@gmail.com">✉️ Contact</li>
+
+        </ul>
+
+    </div>
+</div>
     <!-- Java Script
     ================================================== -->
     <script src="Assets/js/plugins.js"></script>
     <script src="Assets/js/main.js"></script>
     <script src="Assets/js/git.js"></script>
-    <script src="Assets/js/skillbar.js"></script>
+
+    <!-- <div class="cursor-glow"></div> -->
 
     
 </body>

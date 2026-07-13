@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>404 | Gautham Krishna J</title>
+
+<link rel="stylesheet" href="Assets/css/styles.css">
+
+<style>
+
+body{
+    margin:0;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+        20deg,
+        hsl(130deg,8%,14%) 40%,
+        hsl(0deg,0%,13%) 100%
+    );
+
+    overflow:hidden;
+}
+
+.error-container{
+
+    text-align:center;
+    position:relative;
+    z-index:2;
+
+}
+
+.error-code{
+
+    font-size:8rem;
+    color:#97b34a;
+
+    font-family:"Space Mono",monospace;
+    margin:0;
+}
+
+.error-title{
+
+    font-size:2rem;
+    color:white;
+    margin:20px 0 10px;
+}
+
+.error-text{
+
+    color:#bdbdbd;
+    max-width:500px;
+    margin:auto auto 35px;
+}
+
+.error-btn{
+
+    display:inline-block;
+
+    padding:14px 28px;
+
+    border-radius:50px;
+
+    background:#97b34a;
+    color:#111;
+
+    text-decoration:none;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.error-btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.big404{
+
+    position:absolute;
+
+    left:50%;
+    bottom:-40px;
+
+    transform:translateX(-50%);
+
+    font-size:28vw;
+
+    font-weight:900;
+
+    font-family:"Space Mono",monospace;
+
+    color:rgba(255,255,255,.03);
+
+    user-select:none;
+    pointer-events:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="error-container">
+
+    <h1 class="error-code">404</h1>
+
+    <h2 class="error-title">
+        Looks like this page escaped my Git repository. 👀
+    </h2>
+
+    <p class="error-text">
+        The page you're looking for may have been moved,
+        deleted, or the URL is incorrect.
+    </p>
+
+    <a href="/" class="error-btn">
+        ← Back to Portfolio
+    </a>
+
+</div>
+
+<div class="big404">
+    404
+</div>
+
+</body>
+</html>
