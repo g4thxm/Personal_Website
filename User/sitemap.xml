@@ -1,41 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="https://www.xml-sitemaps.com/css/sitemap.css"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-       <loc>https://gauthamk.netlify.app/</loc>
-       <lastmod>2026-07-26T18:39:59+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>1.0000</priority>
+    <loc>https://gauthamk.netlify.app/</loc>
+    <lastmod>2026-07-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
+
   <url>
-       <loc>https://gauthamk.netlify.app/Assets/CVResume.pdf</loc>
-       <lastmod>2026-07-26T18:39:59+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://gauthamk.netlify.app/Assets/CVResume.pdf</loc>
+    <lastmod>2026-07-27T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
+
   <url>
-       <loc>https://gauthamk.netlify.app/Assets/Certificates/SpectrumCertificate.pdf</loc>
-       <lastmod>2026-07-26T18:39:59+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://gauthamk.netlify.app/Assets/Certificates/SpectrumCertificate.pdf</loc>
+    <lastmod>2026-07-27T00:00:00+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
   </url>
+
   <url>
-       <loc>https://gauthamk.netlify.app/Assets/Certificates/ICTCertificate.pdf</loc>
-       <lastmod>2026-07-26T18:39:59+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://gauthamk.netlify.app/Assets/Certificates/ICTCertificate.pdf</loc>
+    <lastmod>2026-07-27T00:00:00+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
   </url>
+
   <url>
-       <loc>https://gauthamk.netlify.app/Assets/Certificates/360Certificate.pdf</loc>
-       <lastmod>2026-07-26T18:39:59+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://gauthamk.netlify.app/Assets/Certificates/360Certificate.pdf</loc>
+    <lastmod>2026-07-27T00:00:00+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
   </url>
+
   <url>
-       <loc>https://gauthamk.netlify.app/Assets/Certificates/Pro1Certificate.pdf</loc>
-       <lastmod>2026-07-26T18:39:59+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://gauthamk.netlify.app/Assets/Certificates/Pro1Certificate.pdf</loc>
+    <lastmod>2026-07-27T00:00:00+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
   </url>
+
 </urlset>
