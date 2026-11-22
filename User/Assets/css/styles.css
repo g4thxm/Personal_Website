@@ -4550,3 +4550,15 @@ img{
 
 .washx-capture{overflow:hidden;border-radius:8px;box-shadow:0 8px 25px #0002}
 .featured-demo__image .washx-capture img{border-radius:0;box-shadow:none;margin:0;display:block;width:100%;height:auto}
+
+/* Credits stay hidden until the visitor opens the dialog. */
+button.project-credits-link{appearance:none;background:none;border:0;border-radius:0;color:#35573f;cursor:pointer;display:inline;padding:0;margin:0;height:auto;line-height:inherit;font:inherit;letter-spacing:normal;text-transform:none;text-decoration:underline;text-underline-offset:2px}
+.project-credits-dialog{box-sizing:border-box;width:calc(100% - 3rem);max-width:64rem;max-height:80vh;margin:auto;padding:2.6rem;border:1px solid #53614f;border-radius:14px;background:#fff6e6;color:#344032;box-shadow:0 24px 70px #0005;overflow:auto}
+.project-credits-dialog::backdrop{background:#17211799}
+.project-credits-dialog__heading{display:flex;align-items:center;justify-content:space-between;gap:2rem;margin-bottom:2rem}
+.project-credits-dialog h4{font-family:var(--font-1);font-size:1.8rem;line-height:1.4;margin:0;color:#344032}
+.project-credits-dialog p{font-size:1.5rem;line-height:1.75;margin:0}
+.project-credits-dialog a{color:#35573f;text-decoration:underline;text-underline-offset:2px}
+.project-credits-dialog form{margin:0}
+button.project-credits-close{height:auto;min-height:40px;margin:0;padding:.7rem 1.2rem;border:0;border-radius:6px;background:#344032;color:#fff6e6;font-size:1.3rem;line-height:1.5;letter-spacing:normal;text-transform:none}
+@media(max-width:500px){.project-credits-dialog{padding:2rem}.project-credits-dialog__heading{gap:1.2rem}.project-credits-dialog h4{font-size:1.6rem}}
