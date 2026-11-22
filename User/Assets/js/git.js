@@ -125,7 +125,7 @@ fetch(`https://api.github.com/users/${username}/repos?sort=updated`)
     repoList.innerHTML = "";
 
     repos
-        .filter(repo => !repo.fork)
+        .filter(repo => !repo.fork && repo.id !== 1467556072 && repo.name.toLowerCase() !== "file-management-demo")
         .slice(0, 6)
         .forEach(repo => {
 
