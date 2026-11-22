@@ -211,3 +211,14 @@ fetch(`https://api.github.com/users/${username}/repos?sort=updated`)
     `;
 
 });
+
+// Project image attribution, available on demand.
+const washxCreditsDialog = document.getElementById("washx-credits");
+const washxCreditsTrigger = document.querySelector("[data-open-washx-credits]");
+if (washxCreditsDialog && washxCreditsTrigger) {
+    washxCreditsTrigger.addEventListener("click", () => washxCreditsDialog.showModal());
+    washxCreditsDialog.addEventListener("click", (event) => {
+        const bounds = washxCreditsDialog.getBoundingClientRect();
+        if (event.target === washxCreditsDialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) washxCreditsDialog.close();
+    });
+}
