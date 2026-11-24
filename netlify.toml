@@ -2,7 +2,18 @@
   publish = "User"
   command = ""
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Cache static assets for a week; HTML stays always-fresh.
+[[headers]]
+  for = "/Assets/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/Assets/icons/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/loadericon.png"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
